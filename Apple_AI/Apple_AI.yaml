@@ -1,0 +1,20 @@
+# Clash rule-provider: behavior: classical
+payload:
+  - DOMAIN-KEYWORD,apple-relay
+  - DOMAIN-KEYWORD,siri
+  - DOMAIN,probe.icloud.com
+  - DOMAIN,metrics.icloud.com
+  - DOMAIN-SUFFIX,cp4.cloudflare.com
+  - DOMAIN,apple-carry-relay.cloudflare.com
+  - DOMAIN,mask-api.icloud.com
+  - DOMAIN,mask-api.fe.apple-dns.net
+  - DOMAIN,mask-api.fe2.apple-dns.net
+  - DOMAIN,mask-t.apple-dns.net
+  - DOMAIN,mask.apple-dns.net
+  - DOMAIN-SUFFIX,mask.icloud.com
+  - DOMAIN-SUFFIX,mask-h2.icloud.com
+  - DOMAIN-SUFFIX,ls.apple.com
+  - DOMAIN-SUFFIX,apps.mzstatic.com
+  - DOMAIN-SUFFIX,guzzoni.apple.com
+  - DOMAIN-SUFFIX,smoot.apple.com
+  - DOMAIN-SUFFIX,gateway.icloud.com
