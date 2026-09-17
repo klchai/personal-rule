@@ -5,6 +5,7 @@
 | 规则 | 内容 | Clash | Loon |
 | --- | --- | --- | --- |
 | US_Bank | 美国银行及个人金融服务 | [YAML](US_Bank/US_Bank.yaml) | [List](US_Bank/US_Bank.list) |
+| Bank_HK | 香港银行 | [YAML](Bank_HK/Bank_HK.yaml) | [List](Bank_HK/Bank_HK.list) |
 | PikPak | PikPak 相关域名 | [YAML](PikPak/pikpak.yaml) | [List](PikPak/pikpak.list) |
 | Apple_AI | Apple AI、Siri 及相关服务域名 | [YAML](Apple_AI/Apple_AI.yaml) | [List](Apple_AI/Apple_AI.list) |
 
@@ -18,4 +19,8 @@
 
 ## 来源
 
-`US_Bank` 合并个人规则与 [Accademia/Additional_Rule_For_Clash 的 BankUS.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml)，并去除完全重复项。其余规则由个人提供。
+`US_Bank` 合并个人规则与 [Accademia/Additional_Rule_For_Clash 的 BankUS.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml)，并去除完全重复项。
+
+`Bank_HK` 来源于 [Accademia/Additional_Rule_For_Clash 的 BankHK.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankHK.yaml)，将 `DOMAIN-SUFFIX,.hk.hsbc.com` 规范为 `DOMAIN-SUFFIX,hk.hsbc.com`。
+
+其余规则由个人提供。

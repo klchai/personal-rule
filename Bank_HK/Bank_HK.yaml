@@ -1,0 +1,18 @@
+# Clash rule-provider: behavior: classical
+payload:
+  - DOMAIN-SUFFIX,hsbc.com.hk
+  - DOMAIN,hk.hsbc.com
+  - DOMAIN-SUFFIX,hk.hsbc.com
+  - DOMAIN-SUFFIX,vam-hk.cloud1.vv1865.com
+  - DOMAIN-SUFFIX,bochk.com
+  - DOMAIN-SUFFIX,ocbcwhhk.com
+  - DOMAIN-SUFFIX,hangseng.com
+  - DOMAIN-SUFFIX,cmbwinglungbank.com
+  - DOMAIN-SUFFIX,cncbinternational.com
+  - DOMAIN-SUFFIX,citibank.com.hk
+  - DOMAIN-SUFFIX,dbs.com.hk
+  - DOMAIN-SUFFIX,ncb.com.hk
+  - DOMAIN-SUFFIX,sc.com.hk
+  - DOMAIN-SUFFIX,sc.com
+  - DOMAIN-SUFFIX,za.group
+  - DOMAIN-SUFFIX,cdn.zaticdn.com
