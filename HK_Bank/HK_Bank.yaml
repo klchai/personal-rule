@@ -19,3 +19,8 @@ payload:
   - DOMAIN-SUFFIX,sc.com
   - DOMAIN-SUFFIX,za.group
   - DOMAIN-SUFFIX,cdn.zaticdn.com
+  - DOMAIN-SUFFIX,moneyback.com.hk
+  - DOMAIN,api.apac.aswatson.com
+  - DOMAIN,hsbc.edge.sdk.awswaf.com
+  - DOMAIN,c-hsbc.lytics.io
+  - DOMAIN,cdnhsbcrhostorage.azureedge.net
