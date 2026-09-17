@@ -17,10 +17,16 @@
 
 同一套规则的两种格式保持一致，更新时请同步修改。
 
+### 香港银行
+
+将 `Bank_HK` 绑定到香港节点或策略组，并放在 `ChinaMax` 等中国直连规则以及最终兜底规则之前。更新文件后需刷新客户端的规则订阅。
+
+`hsbc.com.hk` 和 `bochk.com` 的后缀规则已覆盖其子域名。根据访问实测补充了 `welab.bank`，以及工银亚洲的 `icbc-asia.icbc.com.cn`、`mobilehk.icbc.com.cn`。未将整个 `icbc.com.cn` 纳入香港规则，以免影响中国内地工行服务；其他配套接口需确认具体域名后再添加。
+
 ## 来源
 
 `US_Bank` 合并个人规则与 [Accademia/Additional_Rule_For_Clash 的 BankUS.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml)，并去除完全重复项。
 
-`Bank_HK` 来源于 [Accademia/Additional_Rule_For_Clash 的 BankHK.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankHK.yaml)，将 `DOMAIN-SUFFIX,.hk.hsbc.com` 规范为 `DOMAIN-SUFFIX,hk.hsbc.com`。
+`Bank_HK` 来源于 [Accademia/Additional_Rule_For_Clash 的 BankHK.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankHK.yaml)，将 `DOMAIN-SUFFIX,.hk.hsbc.com` 规范为 `DOMAIN-SUFFIX,hk.hsbc.com`，并结合个人访问实测补充域名。
 
 其余规则由个人提供。
