@@ -16,11 +16,8 @@ payload:
   - DOMAIN,capitalone.smart.link
   - DOMAIN,capitalone-resources.digital-cloud.medallia.com
   - DOMAIN-SUFFIX,hsbc.com.us
-  - DOMAIN,us.hsbc.com
   - DOMAIN-SUFFIX,us.hsbc.com
   - DOMAIN-SUFFIX,plaid.com
-  - DOMAIN-KEYWORD,zellepay
-  - DOMAIN-KEYWORD,zelle
   - DOMAIN-SUFFIX,wellsfargo.com
   - DOMAIN-SUFFIX,citi.com
   - DOMAIN-SUFFIX,citibank.com
@@ -36,7 +33,6 @@ payload:
   - DOMAIN-SUFFIX,trydave.com
   - DOMAIN-SUFFIX,dave.com
   - DOMAIN-SUFFIX,sezzle.com
-  - DOMAIN-SUFFIX,gobankrewards.com
   - DOMAIN-SUFFIX,pnc.com
   - DOMAIN-SUFFIX,jpmorganchase.com
   - DOMAIN-SUFFIX,citigroup.com

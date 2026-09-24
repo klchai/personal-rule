@@ -32,7 +32,7 @@ IP 规则均带 `no-resolve`，只匹配直接以 IP 发起的连接，不会为
 
 ## 来源
 
-`US_Bank` 合并个人规则与 [Accademia/Additional_Rule_For_Clash 的 BankUS.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml)，并去除完全重复项。上游的 `eastwest.com` 实为度假酒店管理公司 East West Hospitality 的域名，已更正为 East West Bank 的 `eastwestbank.com`；另补充 Dave 和 BNY 现用的 `dave.com`、`bny.com`。
+`US_Bank` 合并个人规则与 [Accademia/Additional_Rule_For_Clash 的 BankUS.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml)，并去除完全重复项。上游的 `eastwest.com` 实为度假酒店管理公司 East West Hospitality 的域名，已更正为 East West Bank 的 `eastwestbank.com`；另补充 Dave 和 BNY 现用的 `dave.com`、`bny.com`。删除了上游的 Zelle 关键词规则（会误匹配 `gazelle.com` 等无关域名）和无法确认归属的 `gobankrewards.com`。
 
 `HK_Bank` 来源于 [Accademia/Additional_Rule_For_Clash 的 BankHK.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankHK.yaml)，将 `DOMAIN-SUFFIX,.hk.hsbc.com` 规范为 `DOMAIN-SUFFIX,hk.hsbc.com`，并结合个人访问实测补充域名。
 
