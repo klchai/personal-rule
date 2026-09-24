@@ -1,7 +1,7 @@
 # Clash rule-provider: behavior: classical
 payload:
   - DOMAIN-KEYWORD,apple-relay
-  - DOMAIN-KEYWORD,siri
+  - DOMAIN-SUFFIX,siri.apple.com
   - DOMAIN,probe.icloud.com
   - DOMAIN,metrics.icloud.com
   - DOMAIN-SUFFIX,cp4.cloudflare.com
