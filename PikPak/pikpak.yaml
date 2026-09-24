@@ -9,4 +9,6 @@ payload:
   - DOMAIN-KEYWORD,mypikpak
   - DOMAIN-SUFFIX,pickpackapp.com
   - DOMAIN-SUFFIX,pikpak.io
+  - DOMAIN-SUFFIX,pikpak.me
   - DOMAIN-SUFFIX,pikpak.site
+  - DOMAIN-SUFFIX,pikpakdrive.com

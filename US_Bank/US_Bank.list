@@ -27,11 +27,12 @@ DOMAIN-SUFFIX,usbank.com
 DOMAIN-SUFFIX,americanexpress.com
 DOMAIN-SUFFIX,discover.com
 DOMAIN-SUFFIX,synchronybank.com
-DOMAIN-SUFFIX,eastwest.com
+DOMAIN-SUFFIX,eastwestbank.com
 DOMAIN-SUFFIX,cathaybank.com
 DOMAIN-SUFFIX,varomoney.com
 DOMAIN-SUFFIX,velobank.com
 DOMAIN-SUFFIX,trydave.com
+DOMAIN-SUFFIX,dave.com
 DOMAIN-SUFFIX,sezzle.com
 DOMAIN-SUFFIX,gobankrewards.com
 DOMAIN-SUFFIX,pnc.com
@@ -40,6 +41,7 @@ DOMAIN-SUFFIX,citigroup.com
 DOMAIN-SUFFIX,goldmansachs.com
 DOMAIN-SUFFIX,morganstanley.com
 DOMAIN-SUFFIX,bnymellon.com
+DOMAIN-SUFFIX,bny.com
 DOMAIN-SUFFIX,truist.com
 DOMAIN-SUFFIX,statestreet.com
 DOMAIN-SUFFIX,schwab.com
