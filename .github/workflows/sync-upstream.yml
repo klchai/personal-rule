@@ -1,0 +1,34 @@
+name: Sync upstream rules
+
+on:
+  schedule:
+    - cron: "0 2 * * 1" # 每周一 10:00（北京时间）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync with upstream
+        env:
+          SYNC_SUMMARY: ${{ runner.temp }}/summary.md
+        run: python3 scripts/sync_upstream.py
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: sync/upstream
+          delete-branch: true
+          commit-message: Sync rules with upstream sources
+          title: 同步上游规则更新
+          body-path: ${{ runner.temp }}/summary.md

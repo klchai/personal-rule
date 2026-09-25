@@ -30,6 +30,12 @@
 
 IP 规则均带 `no-resolve`，只匹配直接以 IP 发起的连接，不会为域名请求额外触发 DNS 解析。Grok 客户端还会请求 Statsig 的 `featureassets.org`，这是多个应用共用的域名，为避免影响其他应用未予收录。
 
+## 自动同步上游
+
+[sync-upstream](.github/workflows/sync-upstream.yml) 每周一 10:00（北京时间）运行一次，也可以在 Actions 页面手动触发。它把每个上游来源与 `sync/upstream/` 中的快照对比，只把上游的增删应用到对应规则，并开一个 PR 供审核；个人补充的条目不受影响。
+
+在 [scripts/sync_upstream.py](scripts/sync_upstream.py) 的 `exclude` 中列出的条目（如 `eastwest.com`、Zelle 关键词）不会被重新加回；已被现有规则覆盖的新增条目会跳过，并在 PR 说明中列出。
+
 ## 来源
 
 `US_Bank` 合并个人规则与 [Accademia/Additional_Rule_For_Clash 的 BankUS.yaml](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml)，并去除完全重复项。上游的 `eastwest.com` 实为度假酒店管理公司 East West Hospitality 的域名，已更正为 East West Bank 的 `eastwestbank.com`；另补充 Dave 和 BNY 现用的 `dave.com`、`bny.com`。删除了上游的 Zelle 关键词规则（会误匹配 `gazelle.com` 等无关域名）和无法确认归属的 `gobankrewards.com`。

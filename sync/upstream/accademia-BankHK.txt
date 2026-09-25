@@ -1,0 +1,16 @@
+DOMAIN,hk.hsbc.com
+DOMAIN-SUFFIX,bochk.com
+DOMAIN-SUFFIX,cdn.zaticdn.com
+DOMAIN-SUFFIX,citibank.com.hk
+DOMAIN-SUFFIX,cmbwinglungbank.com
+DOMAIN-SUFFIX,cncbinternational.com
+DOMAIN-SUFFIX,dbs.com.hk
+DOMAIN-SUFFIX,hangseng.com
+DOMAIN-SUFFIX,hk.hsbc.com
+DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,ncb.com.hk
+DOMAIN-SUFFIX,ocbcwhhk.com
+DOMAIN-SUFFIX,sc.com
+DOMAIN-SUFFIX,sc.com.hk
+DOMAIN-SUFFIX,vam-hk.cloud1.vv1865.com
+DOMAIN-SUFFIX,za.group
