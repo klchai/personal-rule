@@ -61,6 +61,7 @@ RULES = {
         "sources": [
             ("accademia-AppleAI", f"{ACC}/AppleAI/AppleAI.yaml", "clash"),
             ("v2fly-apple-intelligence", f"{V2FLY}/apple-intelligence", "v2fly"),
+            ("v2fly-google-deepmind", f"{V2FLY}/google-deepmind", "v2fly"),
         ],
         "exclude": [],
     },
