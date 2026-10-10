@@ -2,7 +2,6 @@
 payload:
   - DOMAIN-KEYWORD,apple-relay
   - DOMAIN-SUFFIX,siri.apple.com
-  - DOMAIN-SUFFIX,api-siri-prod.apple.com
   - DOMAIN,probe.icloud.com
   - DOMAIN,metrics.icloud.com
   - DOMAIN-SUFFIX,cp4.cloudflare.com
