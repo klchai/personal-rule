@@ -18,3 +18,4 @@ payload:
   - DOMAIN-SUFFIX,guzzoni.apple.com
   - DOMAIN-SUFFIX,smoot.apple.com
   - DOMAIN-SUFFIX,gateway.icloud.com
+  - DOMAIN-SUFFIX,kiro.dev
