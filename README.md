@@ -5,7 +5,7 @@
 | 规则 | 内容 | Clash | Loon | 上游来源 |
 | --- | --- | --- | --- | --- |
 | CDN | 日志确认的直连补充域名及飞书服务 | [YAML](CDN/CDN.yaml) | [List](CDN/CDN.list) | 手动补充、[MetaCubeX Feishu](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/classical/feishu.yaml)、[规则说明](CDN/README.md) |
-| CN_Bank | 大陆八家银行及相关金融服务（不含邮储） | [YAML](CN_Bank/CN_Bank.yaml) | [List](CN_Bank/CN_Bank.list) | [blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Loon/README.md)、[筛查记录](CN_Bank/README.md) |
+| CN_Bank | 大陆九家银行及相关金融服务（不含邮储） | [YAML](CN_Bank/CN_Bank.yaml) | [List](CN_Bank/CN_Bank.list) | [blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Loon/README.md)、[筛查记录](CN_Bank/README.md) |
 | US_Bank | 美国银行及个人金融服务 | [YAML](US_Bank/US_Bank.yaml) | [List](US_Bank/US_Bank.list) | [Accademia BankUS](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml) |
 | HK_Bank | 香港银行及相关集团服务 | [YAML](HK_Bank/HK_Bank.yaml) | [List](HK_Bank/HK_Bank.list) | [Accademia BankHK](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankHK.yaml) |
 | PikPak | PikPak 相关域名 | [YAML](PikPak/pikpak.yaml) | [List](PikPak/pikpak.list) | [v2fly pikpak](https://github.com/v2fly/domain-list-community/blob/master/data/pikpak) |
