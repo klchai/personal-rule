@@ -15,6 +15,10 @@ payload:
   - DOMAIN,ef-dongfeng.tanx.com
   - DOMAIN,px.effirst.com
   - DOMAIN,av1.xdrig.com
+  - DOMAIN,gm.mmstat.com
+  - DOMAIN,wgo.mmstat.com
+  - DOMAIN-SUFFIX,ixigua.com
+  - DOMAIN,adsmind.gdtimg.com
   - DOMAIN-SUFFIX,anycross.com
   - DOMAIN-SUFFIX,blmpb.com
   - DOMAIN-SUFFIX,bytedancehermestest.com
