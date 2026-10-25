@@ -4,6 +4,7 @@
 
 | 规则 | 内容 | Clash | Loon | 上游来源 |
 | --- | --- | --- | --- | --- |
+| CDN | 日志确认的直连补充域名及飞书服务 | [YAML](CDN/CDN.yaml) | [List](CDN/CDN.list) | 手动补充、[MetaCubeX Feishu](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/classical/feishu.yaml)、[规则说明](CDN/README.md) |
 | CN_Bank | 大陆八家银行及相关金融服务（不含邮储） | [YAML](CN_Bank/CN_Bank.yaml) | [List](CN_Bank/CN_Bank.list) | [blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Loon/README.md)、[筛查记录](CN_Bank/README.md) |
 | US_Bank | 美国银行及个人金融服务 | [YAML](US_Bank/US_Bank.yaml) | [List](US_Bank/US_Bank.list) | [Accademia BankUS](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankUS.yaml) |
 | HK_Bank | 香港银行及相关集团服务 | [YAML](HK_Bank/HK_Bank.yaml) | [List](HK_Bank/HK_Bank.list) | [Accademia BankHK](https://github.com/Accademia/Additional_Rule_For_Clash/blob/main/Bank/BankHK.yaml) |
@@ -17,6 +18,7 @@
 
 - Clash：以 `.yaml` 作为规则提供器（`type: http`、`behavior: classical`、`format: yaml`），通过 `RULE-SET` 指定策略。
 - Loon：以 `.list` 作为订阅规则。
+- `CDN` 绑定 `DIRECT`，通过 `RULE-SET,CDN,DIRECT` 引用，放在需要覆盖的代理规则及兜底规则之前；如保留广告拦截策略，应将广告拦截规则放在它之前。此组已包含 Feishu，无需重复订阅飞书规则。
 - 订阅需使用 Raw 链接，私有仓库无法直接订阅。
 - `CN_Bank` 默认绑定 `DIRECT`，放在兜底规则之前；主域名可能覆盖境外子域名，需要其他策略时请将精确规则放在此组之前。
 - 将 `HK_Bank` 绑定到香港节点，并放在 `CN_Bank`、`ChinaMax` 等直连规则和兜底规则之前（工银亚洲香港域名需优先于 `icbc.com.cn` 匹配）。香港业务补充条目见 [筛查记录](HK_Bank/README.md)。

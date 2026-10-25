@@ -26,6 +26,12 @@ ACC = "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/mai
 META = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta"
 
 RULES = {
+    "CDN": {
+        "list": "CDN/CDN.list",
+        "sources": [("metacubex-feishu", f"{META}/geo/geosite/classical/feishu.yaml", "clash")],
+        # Personal domain additions are maintained in CDN/CDN.list.
+        "exclude": [],
+    },
     "CN_Bank": {
         "list": "CN_Bank/CN_Bank.list",
         "sources": [
