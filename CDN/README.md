@@ -6,7 +6,7 @@
 
 - 手动提供的 8 条 `DOMAIN-SUFFIX`：`aliapp.org`、`futunn.com`、`larkoffice.com`、`miaozhen.com`、`adukwai.com`、`tanhuoo.com`、`ctobsnssdk.com`、`zimenur.com`。
 - 日志清单中缺少域名覆盖的 6 个主机，以精确 `DOMAIN` 规则补充：`tags.tiqcdn.com`、`sis.jpush.io`、`p66-ad.adkwai.com`、`qzs.gdtimg.com`、`px.effirst.com`、`av1.xdrig.com`。只覆盖列出的主机，不扩展到整个主域。
-- 后续按用户要求补充：精确匹配 `g.alicdn.com`、`adsmind.gdtimg.com`，后缀匹配 `tanx.com`、`mmstat.com`、`ixigua.com`、`weibo.cn`、`xiaohongshu.com`、`fengkongcloud.com`。
+- 后续按用户要求补充：精确匹配 `g.alicdn.com`、`adsmind.gdtimg.com`，后缀匹配 `tanx.com`、`mmstat.com`、`ixigua.com`、`weibo.cn`、`xiaohongshu.com`、`fengkongcloud.com`、`cmpassport.com`、`futustatic.com`、`moomoo.com`、`xiaoyuzhoufm.com`、`zhuanzhuan.com`、`cup.com.cn`。
 - [MetaCubeX Feishu Classical YAML](https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/feishu.yaml)：完整合并飞书域名规则，由仓库每周同步流程跟踪上游增删，快照见 `sync/upstream/metacubex-feishu.txt`。
 
 ## 使用

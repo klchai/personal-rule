@@ -21,6 +21,12 @@ payload:
   - DOMAIN-SUFFIX,weibo.cn
   - DOMAIN-SUFFIX,xiaohongshu.com
   - DOMAIN-SUFFIX,fengkongcloud.com
+  - DOMAIN-SUFFIX,cmpassport.com
+  - DOMAIN-SUFFIX,futustatic.com
+  - DOMAIN-SUFFIX,moomoo.com
+  - DOMAIN-SUFFIX,xiaoyuzhoufm.com
+  - DOMAIN-SUFFIX,zhuanzhuan.com
+  - DOMAIN-SUFFIX,cup.com.cn
   - DOMAIN,adsmind.gdtimg.com
   - DOMAIN-SUFFIX,anycross.com
   - DOMAIN-SUFFIX,blmpb.com
