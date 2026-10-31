@@ -1,5 +1,16 @@
 # Clash rule-provider: behavior: classical
 payload:
+  - DOMAIN-SUFFIX,183-131-56-25-ad3154c0.bvmlt.top
+  - DOMAIN-SUFFIX,183-131-56-36-adaba6ec.bvmlt.top
+  - DOMAIN-SUFFIX,open.kuaishouzt.com
+  - DOMAIN-SUFFIX,akamai.tiqcdn.com
+  - DOMAIN-SUFFIX,yumao.puata.info
+  - DOMAIN-SUFFIX,rum10.perf.linkedin.com
+  - DOMAIN-SUFFIX,b2bca808c6e86178cedd72ec4a63371d.jddebug.com
+  - DOMAIN-SUFFIX,sdk.51.la
+  - DOMAIN-SUFFIX,api.share.mob.com
+  - DOMAIN-SUFFIX,aaid.uyunad.com
+  - DOMAIN-SUFFIX,id6.me
   - DOMAIN-SUFFIX,aliapp.org
   - DOMAIN-SUFFIX,futunn.com
   - DOMAIN-SUFFIX,larkoffice.com
