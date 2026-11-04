@@ -41,7 +41,13 @@ DOMAIN-SUFFIX,xhscdn.net
 DOMAIN-SUFFIX,apple.cn
 DOMAIN,weatherkit.apple.com
 DOMAIN,bag.itunes.apple.com
+DOMAIN,amp-api-edge.apps.apple.com
 DOMAIN-SUFFIX,icbcasia.com
+DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,alipayobjects.com
+DOMAIN-SUFFIX,cn.sc.com
+DOMAIN-SUFFIX,walmartmobile.cn
+DOMAIN-SUFFIX,amemv.com
 DOMAIN-SUFFIX,anycross.com
 DOMAIN-SUFFIX,blmpb.com
 DOMAIN-SUFFIX,bytedancehermestest.com
