@@ -4,7 +4,7 @@
 
 ## 来源
 
-- 手动及日志补充的 50 条规则（含 47 条 `DOMAIN-SUFFIX` 及 3 条本地化 `DOMAIN`）：`bvmlt.top`、`kuaishouzt.com`、`tiqcdn.com`、`puata.info`、`linkedin.com`、`jddebug.com`、`51.la`、`mob.com`、`uyunad.com`、`id6.me`、`aliapp.org`、`futunn.com`、`larkoffice.com`、`miaozhen.com`、`adukwai.com`、`tanhuoo.com`、`ctobsnssdk.com`、`zimenur.com`、`jpush.io`、`adkwai.com`、`gdtimg.com`、`tanx.com`、`effirst.com`、`xdrig.com`、`mmstat.com`、`alicdn.com`、`ixigua.com`、`weibo.cn`、`xiaohongshu.com`、`fengkongcloud.com`、`cmpassport.com`、`futustatic.com`、`moomoo.com`、`xiaoyuzhoufm.com`、`zhuanzhuan.com`、`cup.com.cn`、`snssdk.com`、`isnssdk.com`、`xhscdn.com`、`xhscdn.net`、`apple.cn`、`weatherkit.apple.com`、`bag.itunes.apple.com`、`amp-api-edge.apps.apple.com`、`icbcasia.com`、`alipay.com`、`alipayobjects.com`、`cn.sc.com`、`walmartmobile.cn`、`amemv.com`。
+- 手动及日志补充的 54 条规则（含 50 条 `DOMAIN-SUFFIX` 及 4 条本地化 `DOMAIN`）：`bvmlt.top`、`kuaishouzt.com`、`tiqcdn.com`、`puata.info`、`linkedin.com`、`jddebug.com`、`51.la`、`mob.com`、`uyunad.com`、`id6.me`、`aliapp.org`、`futunn.com`、`larkoffice.com`、`miaozhen.com`、`adukwai.com`、`tanhuoo.com`、`ctobsnssdk.com`、`zimenur.com`、`jpush.io`、`adkwai.com`、`gdtimg.com`、`tanx.com`、`effirst.com`、`xdrig.com`、`mmstat.com`、`alicdn.com`、`ixigua.com`、`weibo.cn`、`xiaohongshu.com`、`fengkongcloud.com`、`cmpassport.com`、`futustatic.com`、`moomoo.com`、`xiaoyuzhoufm.com`、`zhuanzhuan.com`、`cup.com.cn`、`snssdk.com`、`isnssdk.com`、`xhscdn.com`、`xhscdn.net`、`apple.cn`、`weatherkit.apple.com`、`bag.itunes.apple.com`、`amp-api-edge.apps.apple.com`、`amp-api.apps.apple.com`、`icbcasia.com`、`alipay.com`、`alipayobjects.com`、`cn.sc.com`、`walmartmobile.cn`、`amemv.com`、`pddpic.com`、`umetrip.com`、`hjgoodluck.com`。
 - [MetaCubeX Feishu Classical YAML](https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/feishu.yaml)：完整合并飞书域名规则，由仓库每周同步流程跟踪上游增删，快照见 `sync/upstream/metacubex-feishu.txt`。
 
 ## 使用
@@ -17,4 +17,4 @@ RULE-SET,CDN,DIRECT
 
 放在需要覆盖的代理规则及 Final / MATCH 之前。若需要继续拦截广告或统计请求，将相应拦截规则放在 CDN 之前。飞书已合并到此组，可用此组替代单独的 Feishu 订阅。
 
-本组已补充 Apple 国内基础及天气服务（`apple.cn`、`weatherkit.apple.com`、`bag.itunes.apple.com`、`amp-api-edge.apps.apple.com`）以保证直连，其余 Apple、Google 策略仍由对应规则集覆盖；Claude 规则集已移除泛匹配 `DOMAIN-KEYWORD,sentry`，保留 `DOMAIN-SUFFIX,sentry.io`。
+本组已补充 Apple 国内基础及天气服务（`apple.cn`、`weatherkit.apple.com`、`bag.itunes.apple.com`、`amp-api-edge.apps.apple.com`、`amp-api.apps.apple.com`）以保证直连，其余 Apple、Google 策略仍由对应规则集覆盖；Claude 规则集已移除泛匹配 `DOMAIN-KEYWORD,sentry`，保留 `DOMAIN-SUFFIX,sentry.io`。
