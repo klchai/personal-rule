@@ -8,6 +8,7 @@ payload:
   - DOMAIN-SUFFIX,hubciddata.sandai.net
   - DOMAIN-KEYWORD,mypikpak
   - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,mypikpak.net
   - DOMAIN-SUFFIX,pickpackapp.com
   - DOMAIN-SUFFIX,pikpak.io
   - DOMAIN-SUFFIX,pikpak.me
