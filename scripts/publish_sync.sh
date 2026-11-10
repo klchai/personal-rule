@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # Publish the sync script's working tree.
 #
-# Prefer a pull request. This repository currently rejects pull requests
-# created by the Actions GITHUB_TOKEN, so when GitHub returns that specific
-# error the same branch is left for review and an issue is opened instead.
-# Enabling "Allow GitHub Actions to create and approve pull requests"
-# makes the pull-request path succeed and this fallback is skipped.
+# Prefer a pull request. If the repository setting "Allow GitHub Actions to
+# create and approve pull requests" is turned off, GitHub rejects pull
+# requests created by the Actions GITHUB_TOKEN; in that case the branch is
+# left for review and a tracking issue is opened instead.
+#
+# When upstream matches main again, the stale pull request, branch and
+# tracking issue are cleaned up.
 
 set -euo pipefail
 
@@ -44,15 +46,40 @@ tracking_issue_number() {
 }
 
 close_tracking_issue() {
-  local existing
-  existing="$(tracking_issue_number)" || return 0
+  local comment="$1" existing
+  existing="$(tracking_issue_number)"
   if [[ -z "$existing" ]]; then
     return 0
   fi
-  gh issue close "$existing" \
-    --repo "$REPO" \
-    --comment "上游快照已与 main 一致，关闭这条同步提醒。"
+  gh issue close "$existing" --repo "$REPO" --comment "$comment"
   echo "Closed tracking issue #${existing}."
+}
+
+# Print the URL of the open sync pull request, or nothing. Fails loudly if
+# the lookup itself fails, so a broken lookup is not mistaken for "none".
+open_pr_url() {
+  gh pr list \
+    --repo "$REPO" \
+    --head "$BRANCH" \
+    --base main \
+    --state open \
+    --json url \
+    --jq '.[0].url // empty'
+}
+
+cleanup_stale() {
+  local pr
+  pr="$(open_pr_url)"
+  if [[ -n "$pr" ]]; then
+    gh pr close "$pr" --repo "$REPO" \
+      --comment "上游快照已与 main 一致，关闭这条同步 PR。"
+    echo "Closed stale pull request: ${pr}"
+  fi
+  if git ls-remote --exit-code origin "refs/heads/${BRANCH}" >/dev/null 2>&1; then
+    git push origin --delete "refs/heads/${BRANCH}"
+    echo "Deleted stale branch ${BRANCH}."
+  fi
+  close_tracking_issue "上游快照已与 main 一致，关闭这条同步提醒。"
 }
 
 push_branch() {
@@ -86,7 +113,7 @@ EOF
 git add -A
 if git diff --cached --quiet; then
   echo "No upstream changes."
-  close_tracking_issue || echo "Tracking issue was left unchanged."
+  cleanup_stale
   step_summary "上游没有需要提交的变化。"
   exit 0
 fi
@@ -100,34 +127,26 @@ commit_file="$(mktemp)"
 git commit -F "$commit_file"
 push_branch
 
-pr_log="$(mktemp)"
-open_pr=""
-if open_pr="$(gh pr list \
-  --repo "$REPO" \
-  --head "$BRANCH" \
-  --base main \
-  --state open \
-  --json url \
-  --jq '.[0].url // empty' 2>"$pr_log")"; then
-  :
-else
-  open_pr=""
-fi
+open_pr="$(open_pr_url)"
 if [[ -n "$open_pr" ]]; then
   gh pr edit "$open_pr" --repo "$REPO" --title "$TITLE" --body-file "$SUMMARY"
   echo "Updated existing pull request: ${open_pr}"
   step_summary "已更新 pull request：${open_pr}"
+  close_tracking_issue "同步改由 pull request 跟踪：${open_pr}"
   exit 0
 fi
 
+pr_log="$(mktemp)"
 if gh pr create \
   --repo "$REPO" \
   --base main \
   --head "$BRANCH" \
   --title "$TITLE" \
   --body-file "$SUMMARY" >"$pr_log" 2>&1; then
-  echo "Opened pull request: $(cat "$pr_log")"
-  step_summary "已打开 pull request：$(cat "$pr_log")"
+  pr_url="$(tail -n 1 "$pr_log")"
+  echo "Opened pull request: ${pr_url}"
+  step_summary "已打开 pull request：${pr_url}"
+  close_tracking_issue "同步改由 pull request 跟踪：${pr_url}"
   exit 0
 fi
 
