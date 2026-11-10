@@ -101,11 +101,10 @@ git commit -F "$commit_file"
 push_branch
 
 pr_log="$(mktemp)"
-owner="${REPO%%/*}"
 open_pr=""
 if open_pr="$(gh pr list \
   --repo "$REPO" \
-  --head "${owner}:${BRANCH}" \
+  --head "$BRANCH" \
   --base main \
   --state open \
   --json url \
