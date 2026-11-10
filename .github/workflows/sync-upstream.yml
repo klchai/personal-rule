@@ -7,28 +7,28 @@ on:
 
 permissions:
   contents: write
+  issues: write
   pull-requests: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      SYNC_SUMMARY: ${{ runner.temp }}/summary.md
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Sync with upstream
-        env:
-          SYNC_SUMMARY: ${{ runner.temp }}/summary.md
         run: python3 scripts/sync_upstream.py
 
-      - name: Open pull request
-        uses: peter-evans/create-pull-request@v7
-        with:
-          branch: sync/upstream
-          delete-branch: true
-          commit-message: Sync rules with upstream sources
-          title: 同步上游规则更新
-          body-path: ${{ runner.temp }}/summary.md
+      - name: Publish sync
+        env:
+          GIT_AUTHOR_NAME: ${{ github.actor }}
+          GIT_AUTHOR_EMAIL: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: bash scripts/publish_sync.sh
