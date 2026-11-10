@@ -28,4 +28,4 @@
 
 ## 自动同步
 
-[sync-upstream](.github/workflows/sync-upstream.yml) 每周一 10:00（北京时间）运行，也可手动触发。它将上游与 `sync/upstream/` 中的快照对比，只同步上游的增删，并开 PR 供审核。不想被加回的条目写入 [sync_upstream.py](scripts/sync_upstream.py) 的 `exclude`。
+[sync-upstream](.github/workflows/sync-upstream.yml) 每周一 10:00（北京时间）运行，也可手动触发。它将上游与 `sync/upstream/` 中的快照对比，只同步上游的增删，并开 PR 供审核。个人仓库默认不允许 GitHub Actions 创建 pull request；此时变更留在 `sync/upstream` 分支，并创建或更新标题为「同步上游规则更新」的 issue，正文含对比链接。在 Settings → Actions → General → Workflow permissions 勾选 Allow GitHub Actions to create and approve pull requests 后，同步会直接开 PR。不想被加回的条目写入 [sync_upstream.py](scripts/sync_upstream.py) 的 `exclude`。
