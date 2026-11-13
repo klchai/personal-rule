@@ -1,6 +1,9 @@
 # Clash rule-provider: behavior: classical
 payload:
   - DOMAIN-SUFFIX,equifax.com
+  - DOMAIN-SUFFIX,transunion.com
+  - DOMAIN-SUFFIX,tuinteractive.com
+  - DOMAIN-SUFFIX,trueidentity.com
   - DOMAIN-SUFFIX,polymarket.us
   - DOMAIN,polymarket-upload.s3.us-east-2.amazonaws.com
   - DOMAIN-SUFFIX,creditkarma.com
