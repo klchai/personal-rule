@@ -110,3 +110,5 @@ payload:
   - DOMAIN-SUFFIX,plista.com
   - DOMAIN-SUFFIX,anyrtb.com
   - DOMAIN-SUFFIX,advertising.com
+  - DOMAIN-SUFFIX,checktrustworthiness.com
+  - DOMAIN-SUFFIX,unioncom.cc
