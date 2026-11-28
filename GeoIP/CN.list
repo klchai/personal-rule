@@ -1,0 +1,2 @@
+# Loon: place this remote rule after service, ChinaMax and LAN rules.
+GEOIP,CN
